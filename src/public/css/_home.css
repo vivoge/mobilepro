@@ -1,0 +1,33 @@
+/*_home s*/
+.tab-item .icon{
+    font-size:27px;
+}
+.tab-item.activated, .tab-item.active, .tab-item.tab-item-active{
+    background-color:orangered;
+}
+
+.home_swiper ion-slide{
+   width:100%;
+    height:150px;
+}
+
+.home_swiper ion-slide img{
+    width:100%;
+    height:150px;
+}
+
+.home_nav div img {
+    display: block;
+    margin: 0 auto;
+}
+
+.home_red_bg{
+    background-color: red;
+}
+
+
+
+
+
+
+/*_home e*/

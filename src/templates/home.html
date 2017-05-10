@@ -1,0 +1,31 @@
+<ion-view view-title="首页">
+
+    <ion-content>
+        <div class="home_swiper">
+
+            <ion-slide-box does-continue="true" auto-play="true" slide-interval="3000" ng-init="getImagesList(img)">
+                <ion-slide ng-repeat="x in imagesList">
+                    <img src="{{x.imgurl}}" alt="">
+                </ion-slide>
+
+            </ion-slide-box>
+        </div>
+
+        <div class="home_nav">
+            <div class="row">
+                <div class="col col-20"><img src="../public/images/avatar.jpg" alt="" width="40px" height="40px"></div>
+                <div class="col col-20"><img src="../public/images/avatar.jpg" alt="" width="40px" height="40px"></div>
+                <div class="col col-20"><img src="../public/images/avatar.jpg" alt="" width="40px" height="40px"></div>
+                <div class="col col-20"><img src="../public/images/avatar.jpg" alt="" width="40px" height="40px"></div>
+                <div class="col col-20"><img src="../public/images/avatar.jpg" alt="" width="40px" height="40px"></div>
+            </div>
+            <div class="row">
+                <div class="col col-20"><img src="../public/images/avatar.jpg" alt="" width="40px" height="40px"></div>
+                <div class="col col-20"><img src="../public/images/avatar.jpg" alt="" width="40px" height="40px"></div>
+                <div class="col col-20"><img src="../public/images/avatar.jpg" alt="" width="40px" height="40px"></div>
+                <div class="col col-20"><img src="../public/images/avatar.jpg" alt="" width="40px" height="40px"></div>
+                <div class="col col-20"><img src="../public/images/avatar.jpg" alt="" width="40px" height="40px"></div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

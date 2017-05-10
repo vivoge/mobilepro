@@ -1,0 +1,31 @@
+/*find css start*/
+ion-scroll{
+    width: 100%;
+}
+.sub_header_list{
+    width:160%;
+}
+
+.sub_header_list .button.button-clear{
+    border-bottom:1px solid dimgray;
+}
+
+.sub_header_list .button{
+    color:black;
+    width: 20%;
+}
+
+.sub_header_list .sub-button-select{
+    border-bottom:3px solid black;
+    position:relative;
+}
+
+.bar.bar-subheader{
+    border-bottom:none;
+}
+
+.sub_header_list .button.button-clear.sub-button-select{
+    border-bottom:2px solid dimgray;
+}
+
+/*find css end*/
