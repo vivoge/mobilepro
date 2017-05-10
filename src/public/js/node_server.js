@@ -14,7 +14,7 @@ app.all('*', function(req, res, next) {
 
 
 app.route('/').get(function (req,res) {
-    console.log(req.params,req.query);
+
     var aid = req.query.aid;
     var car = req.query.car;
 
@@ -49,5 +49,7 @@ app.route('/content').get(function (req,res) {
 });
 
 
-app.listen(9090);
-console.log('Listening on port 9090...');
+app.listen('9090',function () {
+    console.log('9090端口启动成功');
+});
+

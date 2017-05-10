@@ -24,19 +24,19 @@ myAppModuleController.controller('findControl',['$scope','discussFactory','$http
     };
 
     $scope.fileList = function () {
-        // var url = 'http://localhost:9090/?aid=1'
-        // $http.get(url).then(successData,errorData);
-        // function successData(data) {
-        //     $scope.findlist = data.data;
-        // }
-        // function errorData(data) {
-        // }
-        var list = discussFactory.getTopic(1);
-        list.then(function (data) {
-            console.log(data);
-            $scope.findlist = data;
-
-        })
+        var url = 'http://localhost:9090/?aid=1'
+        $http.get(url).then(successData,errorData);
+        function successData(data) {
+            $scope.findlist = data.data;
+        }
+        function errorData(data) {
+        }
+        // var list = discussFactory.getTopic(1);
+        // list.then(function (data) {
+        //     console.log(data);
+        //     $scope.findlist = data;
+        //
+        // })
     }
 
     $scope.doRefresh = function () {
