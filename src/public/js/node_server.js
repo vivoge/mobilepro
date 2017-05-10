@@ -17,10 +17,12 @@ app.route('/').get(function (req,res) {
     console.log(req.params,req.query);
     var aid = req.query.aid;
     var car = req.query.car;
+
+
     if(aid){
         var news = require('./news.json');
         var arg = news.filter(function (item) {
-            return item.aid = aid;
+            return item.aid == aid;
         })
 
         var arb = [];

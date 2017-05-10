@@ -7,7 +7,6 @@ myAppModuleController.controller('homeControl',['$scope','discussFactory',functi
         var img = 'img';
         var imgurls = discussFactory.getImageUrl(img);
         imgurls.then(function (data) {
-            console.log(data);
             $scope.imagesList = data;
         })
     }
@@ -25,27 +24,31 @@ myAppModuleController.controller('findControl',['$scope','discussFactory','$http
     };
 
     $scope.fileList = function () {
-        var url = 'http://localhost:9090/?aid=1'
-        $http.get(url).then(successData,errorData);
+        // var url = 'http://localhost:9090/?aid=1'
+        // $http.get(url).then(successData,errorData);
+        // function successData(data) {
+        //     $scope.findlist = data.data;
+        // }
+        // function errorData(data) {
+        // }
+        var list = discussFactory.getTopic(1);
+        list.then(function (data) {
+            console.log(data);
+            $scope.findlist = data;
 
-        function successData(data) {
-
-            $scope.findlist = data.data;
-        }
-
-        function errorData(data) {
-
-        }
+        })
     }
 
-    // $scope.doRefresh = function () {
-    //
-    //     discussFactory.getTopic();
-    //     $scope.$on('queryDataComplete',function (event,data) {
-    //         $scope.aa = data;
-    //     });
-    //     $scope.$broadcast('scroll.refreshComplete');
-    // };
+    $scope.doRefresh = function () {
+
+        var list= discussFactory.getTopic(2);
+        list.then(function (data) {
+            console.log(data);
+            $scope.findlist = data;
+            $scope.$broadcast('scroll.refreshComplete');
+        })
+
+    };
     // $scope.loadMore = function () {
     //     $scope.$broadcast('scroll.infiniteScrollComplete');
     // };

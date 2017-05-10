@@ -13,7 +13,7 @@ myAppModuleService.factory('discussFactory',['$resource','$http','ENV','$rootSco
              getTopic:function (num) {
 
                  var defer = $q.defer();
-                 resource.query({"catid":num},function (data) {
+                 resource.query({"aid":num},function (data) {
                     defer.resolve(data);
                 },function (data) {
                     defer.reject(data)
