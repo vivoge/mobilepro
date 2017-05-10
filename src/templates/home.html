@@ -3,9 +3,9 @@
     <ion-content>
         <div class="home_swiper">
 
-            <ion-slide-box does-continue="true" auto-play="true" slide-interval="3000" ng-init="getImagesList(img)">
+            <ion-slide-box does-continue="true" auto-play="true" slide-interval="3000" ng-init="getImagesList()">
                 <ion-slide ng-repeat="x in imagesList">
-                    <img src="{{x.imgurl}}" alt="">
+                    <img data-src="{{x.imgurl}}" alt="">
                 </ion-slide>
 
             </ion-slide-box>

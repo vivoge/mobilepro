@@ -3,7 +3,8 @@ var myAppModuleController = angular.module("myApp.controller",[]);
 //home tab
 myAppModuleController.controller('homeControl',['$scope','discussFactory',function ($scope,discussFactory) {
 
-    $scope.getImagesList = function (img) {
+    $scope.getImagesList = function () {
+        var img = 'img';
         var imgurls = discussFactory.getImageUrl(img);
         imgurls.then(function (data) {
             console.log(data);
@@ -28,7 +29,7 @@ myAppModuleController.controller('findControl',['$scope','discussFactory','$http
         $http.get(url).then(successData,errorData);
 
         function successData(data) {
-            console.log(data,'fl');
+
             $scope.findlist = data.data;
         }
 

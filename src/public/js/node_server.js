@@ -14,24 +14,26 @@ app.all('*', function(req, res, next) {
 
 
 app.route('/').get(function (req,res) {
-
+    console.log(req.params,req.query);
     var aid = req.query.aid;
-
+    var car = req.query.car;
     if(aid){
         var news = require('./news.json');
         var arg = news.filter(function (item) {
             return item.aid = aid;
         })
-        res.send(arg)
+
+        var arb = [];
+        for(var i=0;i<5;i++){
+            arb.push(arg[i]);
+        }
+        res.send(arb)
     }
 
-    if(req.query.car){
+    if(car){
         var imgUrl = fs.readFileSync('./imgurl.json');
         res.send(imgUrl);
     }
-
-
-
 
 
 });
@@ -40,6 +42,7 @@ app.route('/').get(function (req,res) {
 app.route('/content').get(function (req,res) {
     var catid = req.query.catid;
     var data = fs.readFileSync('news.json');
+
     res.send(data)
 });
 
