@@ -24,7 +24,7 @@ myAppModuleController.controller('findControl',['$scope','discussFactory','$http
     };
 
     $scope.fileList = function () {
-        var url = 'http://localhost:9090/?aid=1'
+        var url = 'http://129.9.101.106:9090/?aid=1'
         $http.get(url).then(successData,errorData);
         function successData(data) {
             $scope.findlist = data.data;

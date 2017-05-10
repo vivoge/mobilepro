@@ -7,7 +7,9 @@
 
         <ion-list ng-init="fileList()">
             <ion-item ng-repeat="item in findlist">
-                {{item.title}}
+                <div class="imgbox"><img data-ng-src="{{item.picurl}}" alt=""></div>
+                <div class="titlebox"><span>{{item.title}}</span></div>
+
             </ion-item>
         </ion-list>
 

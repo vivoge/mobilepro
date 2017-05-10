@@ -28,4 +28,24 @@ ion-scroll{
     border-bottom:2px solid dimgray;
 }
 
+.imgbox{
+    position: relative;
+    left:0;
+     max-width: 10%;
+     float: left;
+}
+.imgbox img{
+    width: 60px;
+    height:60px;
+}
+.titlebox{
+    position: relative;
+    left:35px;
+    max-width:80%;
+
+    overflow: hidden;
+}
+.titlebox span{
+    font-size:12px;
+}
 /*find css end*/
