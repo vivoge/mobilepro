@@ -32,6 +32,10 @@ myAppModuleService.factory('discussFactory',['$resource','$http','ENV','$rootSco
              }
          }
 
+
+
+}]);
+
 myAppModuleService.directive('changeTab',function () {
     return {
         restrict:'A',
@@ -40,5 +44,3 @@ myAppModuleService.directive('changeTab',function () {
         }
     }
 })
-
-}]);
