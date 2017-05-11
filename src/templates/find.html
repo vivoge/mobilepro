@@ -1,6 +1,19 @@
 <ion-view view-title="发现">
+    <div class="bar bar-subheader">
+        <ion-scroll direction="x" scrollbar-x="false">
+            <div class="button-bar sub_header_list" id="sub_header_list">
+                <a href="" class="button button-clear" ng-click="changeTab()">单机</a>
+                <a href="" class="button button-clear" ng-click="changeTab()">动漫</a>
+                <a href="" class="button button-clear" ng-click="changeTab()">影视</a>
+                <a href="" class="button button-clear" ng-click="changeTab()">科技</a>
+                <a href="" class="button button-clear" ng-click="changeTab()">网游</a>
+                <a href="" class="button button-clear" ng-click="changeTab()">手游</a>
+                <a href="" class="button button-clear" ng-click="changeTab()">硬件</a>
+            </div>
+        </ion-scroll>
+    </div>
 
-    <ion-content>
+    <ion-content class="has-subheader">
         <ion-refresher pulling-text="下拉刷新" on-refresh="doRefresh()">
 
         </ion-refresher>
