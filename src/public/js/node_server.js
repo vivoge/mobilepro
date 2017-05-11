@@ -25,11 +25,11 @@ app.route('/').get(function (req,res) {
             return item.aid == aid;
         })
 
-        var arb = [];
-        for(var i=0;i<5;i++){
-            arb.push(arg[i]);
-        }
-        res.send(arb)
+        // var arb = [];
+        // for(var i=0;i<5;i++){
+        //     arb.push(arg[i]);
+        // }
+        res.send(arg)
     }
 
     if(car){

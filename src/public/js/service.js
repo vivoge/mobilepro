@@ -21,7 +21,7 @@ myAppModuleService.factory('discussFactory',['$resource','$http','ENV','$rootSco
                  return defer.promise
              },
              getImageUrl:function (img) {
-                var base = $resource('http://129.9.101.106:9090/:carimg',{carimg:'@car'})
+                var base = $resource('http://localhost:9090/:carimg',{carimg:'@car'})
                  var defer = $q.defer();
                  base.query({car:img},function (data) {
                      defer.resolve(data);
@@ -32,6 +32,13 @@ myAppModuleService.factory('discussFactory',['$resource','$http','ENV','$rootSco
              }
          }
 
+myAppModuleService.directive('changeTab',function () {
+    return {
+        restrict:'A',
+        link:function (scope, element, attrs) {
 
+        }
+    }
+})
 
 }]);

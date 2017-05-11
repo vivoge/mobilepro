@@ -1,14 +1,14 @@
 <ion-view view-title="发现">
     <div class="bar bar-subheader">
         <ion-scroll direction="x" scrollbar-x="false">
-            <div class="button-bar sub_header_list" id="sub_header_list">
-                <a href="" class="button button-clear" ng-click="changeTab()">单机</a>
-                <a href="" class="button button-clear" ng-click="changeTab()">动漫</a>
-                <a href="" class="button button-clear" ng-click="changeTab()">影视</a>
-                <a href="" class="button button-clear" ng-click="changeTab()">科技</a>
-                <a href="" class="button button-clear" ng-click="changeTab()">网游</a>
-                <a href="" class="button button-clear" ng-click="changeTab()">手游</a>
-                <a href="" class="button button-clear" ng-click="changeTab()">硬件</a>
+            <div class="button-bar sub_header_list" id="sub_header_list" changeTab>
+                <a href="" class="button button-clear changeSelect" ng-click="changeTab(1,1)">单机</a>
+                <a href="" class="button button-clear" ng-click="changeTab(2)">动漫</a>
+                <a href="" class="button button-clear" ng-click="changeTab(3)">影视</a>
+                <a href="" class="button button-clear" ng-click="changeTab(4)">科技</a>
+                <a href="" class="button button-clear" ng-click="changeTab(5)">网游</a>
+                <a href="" class="button button-clear" ng-click="changeTab(6)">手游</a>
+                <a href="" class="button button-clear" ng-click="changeTab(7)">硬件</a>
             </div>
         </ion-scroll>
     </div>

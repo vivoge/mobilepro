@@ -48,4 +48,8 @@ ion-scroll{
 .titlebox span{
     font-size:12px;
 }
+
+.changeSelect{
+    border-bottom:2px red solid;
+}
 /*find css end*/

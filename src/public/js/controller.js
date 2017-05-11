@@ -23,8 +23,16 @@ myAppModuleController.controller('findControl',['$scope','discussFactory','$http
         })
     };
 
+    $scope.changeTab = function (catid, num) {
+        var tabfiles = discussFactory.getTopic(catid);
+        tabfiles.then(success);
+        function success(data) {
+            $scope.findlist = data;
+        }
+    }
+
     $scope.fileList = function () {
-        var url = 'http://129.9.101.106:9090/?aid=1'
+        var url = 'http://localhost:9090/?aid=1'
         $http.get(url).then(successData,errorData);
         function successData(data) {
             $scope.findlist = data.data;
