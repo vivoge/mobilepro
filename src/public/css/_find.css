@@ -49,9 +49,8 @@ ion-scroll{
     font-size:12px;
 }
 
-.changeSelect{
+.sub_header_list .button.changeSelect{
     border-bottom:3px red solid;
-
 
 }
 /*find css end*/
