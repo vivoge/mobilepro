@@ -40,7 +40,10 @@ myAppModuleService.directive('changeTab',function () {
     return {
         restrict:'A',
         link:function (scope, element, attrs) {
-
+            element.on('click',function (event) {
+                element.children().removeClass('changeSelect')
+                angular.element(event.target).addClass('changeSelect');
+            })
         }
     }
 })
