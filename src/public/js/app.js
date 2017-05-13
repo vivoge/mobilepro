@@ -57,9 +57,9 @@ app.config(['$ionicConfigProvider','$stateProvider','$urlRouterProvider',functio
             }
         })
         .state('content',{
-            url:'/content/:catid',
-            templateUrl:'../../templates/newscontent.html',
-            controller:'findControl'
+            url:'/content/:aid',
+            templateUrl:'../../templates/news-content.html',
+            controller:'newsContent'
         })
     ;
 

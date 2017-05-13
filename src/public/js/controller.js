@@ -32,7 +32,7 @@ myAppModuleController.controller('findControl',['$scope','discussFactory','$http
     }
 
     $scope.fileList = function () {
-        var url = 'http://localhost:9090/?aid=1'
+        var url = 'http://localhost:9090/?catid=1'
         $http.get(url).then(successData,errorData);
         function successData(data) {
             $scope.findlist = data.data;
@@ -76,4 +76,8 @@ myAppModuleController.controller('discussControl',['$scope','discussFactory',fun
 
 myAppModuleController.controller('mineControl',['$scope',function ($scope) {
 
+}]);
+
+myAppModuleController.controller('newsContent',['$scope',function ($scope) {
+    $scope.newsdetail = '111';
 }]);

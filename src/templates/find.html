@@ -19,7 +19,7 @@
         </ion-refresher>
 
         <ion-list ng-init="fileList()">
-            <ion-item ng-repeat="item in findlist">
+            <ion-item ng-repeat="item in findlist"  href="#/content/{{item.aid}}">
                 <div class="imgbox"><img data-ng-src="{{item.picurl}}" alt=""></div>
                 <div class="titlebox"><span>{{item.title}}</span></div>
 

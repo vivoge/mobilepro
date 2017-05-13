@@ -15,20 +15,17 @@ app.all('*', function(req, res, next) {
 
 app.route('/').get(function (req,res) {
 
-    var aid = req.query.aid;
+    var catid = req.query.catid;
     var car = req.query.car;
 
 
-    if(aid){
+    if(catid){
         var news = require('./news.json');
         var arg = news.filter(function (item) {
-            return item.aid == aid;
+            return item.catid == catid;
         })
 
-        // var arb = [];
-        // for(var i=0;i<5;i++){
-        //     arb.push(arg[i]);
-        // }
+
         res.send(arg)
     }
 
