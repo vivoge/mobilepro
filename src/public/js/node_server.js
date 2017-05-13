@@ -39,10 +39,15 @@ app.route('/').get(function (req,res) {
 
 
 app.route('/content').get(function (req,res) {
-    var catid = req.query.catid;
-    var data = fs.readFileSync('news.json');
+    var aid = req.query.aid;
+    if(aid){
+        var data = require('./newsdetail.json');
+        var aidarr = data.filter(function (item) {
+            return item.aid == aid;
+        })
+        res.send(aidarr);
+    }
 
-    res.send(data)
 });
 
 

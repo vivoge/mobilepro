@@ -78,6 +78,12 @@ myAppModuleController.controller('mineControl',['$scope',function ($scope) {
 
 }]);
 
-myAppModuleController.controller('newsContent',['$scope',function ($scope) {
-    $scope.newsdetail = '111';
+myAppModuleController.controller('newsContent',['$scope','newsDetail','$stateParams',function ($scope,newsDetail,$stateParams) {
+
+    var aid = $stateParams.aid;
+
+    var data = newsDetail.getnewscontent(aid);
+    data.then(function (data) {
+        $scope.newsdetail = data[0];
+    })
 }]);

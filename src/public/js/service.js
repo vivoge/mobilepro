@@ -47,3 +47,19 @@ myAppModuleService.directive('changeTab',function () {
         }
     }
 })
+
+myAppModuleService.factory('newsDetail',['$resource','$q','ENV',function ($resource,$q,ENV) {
+
+    var resource = $resource(ENV.content,{});
+    return {
+         getnewscontent:function (_aid) {
+              var defer = $q.defer();
+             resource.query({"aid":_aid},function (data) {
+                 defer.resolve(data)
+             },function () {
+                 defer.reject(data);
+             });
+             return defer.promise
+         }
+    }
+}]);
